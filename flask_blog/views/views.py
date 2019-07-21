@@ -20,9 +20,9 @@ def login():
 
     if request.method == "POST":
         if request.form["username"] != app.config["USERNAME"]:
-            flash("ユーザ名が違います")
+            flash("ユーザ名が異なります")
         elif request.form["password"] != app.config["PASSWORD"]:
-            flash("パスワードが違います")
+            flash("パスワードが異なります")
         else:
             flash("ログインしました")
             session["logged_in"] = True
